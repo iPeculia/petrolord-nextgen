@@ -1,0 +1,44 @@
+/* Well Geometry Specific Styles */
+
+.geometry-table-row {
+  border-bottom: 1px solid #1e293b;
+  transition: background-color 0.2s;
+}
+
+.geometry-table-row:hover {
+  background-color: #1e293b;
+}
+
+.geometry-input {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #f8fafc;
+  width: 100%;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.geometry-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* blue-500 */
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.section-card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.depth-marker {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  border-top: 1px dashed #64748b;
+  font-size: 10px;
+  color: #94a3b8;
+  text-align: right;
+  padding-right: 4px;
+}

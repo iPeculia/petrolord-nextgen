@@ -1,0 +1,81 @@
+.petro-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 3.5rem); /* Adjust based on header height */
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.petro-header {
+  height: 3.5rem;
+  border-bottom: 1px solid hsl(var(--border));
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(var(--card));
+}
+
+.petro-analysis-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 320px 1fr 320px;
+  gap: 1px;
+  background-color: hsl(var(--border)); /* Grid lines effect */
+  overflow: hidden;
+}
+
+.petro-left-panel {
+  background-color: hsl(var(--background));
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.petro-workspace {
+  background-color: #0f172a; /* Dark background for workspace */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.petro-results-panel {
+  background-color: hsl(var(--background));
+  overflow-y: auto;
+  border-left: 1px solid hsl(var(--border));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar hiding for sleek look in viewer */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .petro-analysis-grid {
+    grid-template-columns: 280px 1fr 0px; /* Hide right panel initially on smaller screens */
+  }
+  .petro-results-panel {
+      display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .petro-analysis-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .petro-left-panel {
+      height: auto;
+      max-height: 300px;
+  }
+}

@@ -1,0 +1,92 @@
+.app-card {
+  background-color: #1E293B; /* Slate 800 */
+  border: 1px solid #334155; /* Slate 700 */
+  border-radius: 0.75rem; /* rounded-xl */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-color: var(--card-hover-color, #334155);
+}
+
+.app-card-icon-container {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background: rgba(15, 23, 42, 0.5); /* Slate 950 with opacity */
+  transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-card-icon-container {
+  transform: scale(1.1);
+}
+
+.app-card-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700;
+  color: #F8FAFC; /* Slate 50 */
+  margin-bottom: 0.75rem;
+  line-height: 1.75rem;
+}
+
+.app-card-description {
+  font-size: 0.875rem; /* text-sm */
+  color: #94A3B8; /* Slate 400 */
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  flex-grow: 1;
+}
+
+.app-card-footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+/* Gradient Definitions for Icons (handled in JS, but fallback here if needed) */
+.icon-gradient-blue { stroke: url(#blue-cyan-gradient); }
+.icon-gradient-orange { stroke: url(#orange-red-gradient); }
+.icon-gradient-purple { stroke: url(#purple-pink-gradient); }
+.icon-gradient-teal { stroke: url(#teal-green-gradient); }
+.icon-gradient-gold { stroke: url(#gold-amber-gradient); }
+.icon-gradient-green { stroke: url(#green-gradient); }
+.icon-gradient-lime { stroke: url(#lime-gradient); }
+
+/* Button Variants based on card theme */
+.app-card-btn {
+  width: 100%;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.app-card-btn.available {
+  background-color: transparent;
+  border: 1px solid currentColor;
+  color: var(--card-btn-color, #BFFF00);
+}
+
+.app-card-btn.available:hover {
+  background-color: var(--card-btn-color, #BFFF00);
+  color: #0F172A; /* Slate 950 */
+  border-color: var(--card-btn-color, #BFFF00);
+}
+
+.app-card-btn.coming-soon {
+  background-color: #334155;
+  color: #94A3B8;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}

@@ -1,0 +1,33 @@
+/* Styles for the Material Balance Analysis module */
+
+/* Data Preview Table */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Drag and Drop Zone */
+.dropzone {
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.dropzone-active {
+    border-color: hsl(var(--primary));
+    background-color: hsla(var(--primary), 0.1);
+}
+
+.dropzone-accept {
+    border-color: hsl(var(--success));
+    background-color: hsla(var(--success), 0.1);
+}
+
+.dropzone-reject {
+    border-color: hsl(var(--destructive));
+    background-color: hsla(var(--destructive), 0.1);
+}

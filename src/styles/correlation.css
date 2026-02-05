@@ -1,0 +1,72 @@
+/* PetroLord Well Correlation Theme */
+:root {
+  --petro-bg: #0F172A; /* Slate 950 */
+  --petro-panel: #1E293B; /* Slate 800 */
+  --petro-border: #334155; /* Slate 700 */
+  --petro-accent: #CCFF00; /* Lime Green */
+  --petro-accent-hover: #B3E600;
+  --petro-text-main: #F8FAFC;
+  --petro-text-muted: #94A3B8;
+}
+
+.petro-layout {
+  background-color: var(--petro-bg);
+  color: var(--petro-text-main);
+}
+
+/* Custom Scrollbar */
+.petro-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.petro-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.petro-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--petro-border);
+  border-radius: 3px;
+}
+.petro-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--petro-text-muted);
+}
+
+/* Sidebar Transitions */
+.sidebar-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Overrides */
+.btn-primary-petro {
+  background-color: var(--petro-accent);
+  color: #000000;
+  font-weight: 600;
+}
+.btn-primary-petro:hover {
+  background-color: var(--petro-accent-hover);
+}
+
+.btn-secondary-petro {
+  background-color: var(--petro-panel);
+  border: 1px solid var(--petro-border);
+  color: var(--petro-text-main);
+}
+.btn-secondary-petro:hover {
+  background-color: var(--petro-border);
+}
+
+/* Input Overrides */
+.input-petro {
+  background-color: #020617; /* Darker than panel */
+  border-color: var(--petro-border);
+  color: var(--petro-text-main);
+}
+.input-petro:focus {
+  border-color: var(--petro-accent);
+  ring-color: var(--petro-accent);
+}
+
+/* Tab Active State override */
+.tab-active {
+  color: var(--petro-accent) !important;
+  border-bottom-color: var(--petro-accent) !important;
+}
